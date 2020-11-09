@@ -1,9 +1,11 @@
+import React from 'react'
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import styles from '../styles/Home.module.css'
 
 import MainScene from '../components/MainScene'
 import HamburgerMenu from '../components/HamburgerMenu'
+import Eyeballs from '../components/Eyeballs'
 
 const CursorCircle = dynamic(() => import('../components/CursorCircle'), {
   ssr: false,
@@ -20,6 +22,7 @@ export default function Home() {
       </Head>
       <HamburgerMenu />
       <main className={`${styles.main} flex flex-grow flex-col`}>
+        <Eyeballs />
         <MainScene />
       </main>
 
